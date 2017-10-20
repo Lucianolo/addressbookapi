@@ -18,10 +18,10 @@ Node.js RESTful API for users/addresses management.
 >Content-Type : Application/json
 
 ### Body: ###
->{
->>	email: String,
->>	password: String
->}
+>{  
+>>	email: String,  
+>>	password: String  
+>}  
 
 ------------------
 
@@ -32,10 +32,10 @@ Node.js RESTful API for users/addresses management.
 >Content-Type: Application/json
 
 ### Body: ###
->{
->>	email: String,
->>	password: String
->}
+>{  
+>>	email: String,  
+>>	password: String  
+>}  
 
 
 ------------------
@@ -48,16 +48,16 @@ Node.js RESTful API for users/addresses management.
 
 ### Headers: ###
 
->Content-Type : Application/json,
->Authorization: JWT token
+>Content-Type : Application/json,  
+>Authorization: JWT token  
 
 ### Body: ###
->{
->>	user_id: String,
->>	payload : {
->>>		first_name: String,
->>>		last_name: String,
->>>		address: String
->>	}
->}
+>{  
+>>	user_id: String,  
+>>	payload : {  
+>>>		first_name: String,  
+>>>		last_name: String,  
+>>>		address: String  
+>>	}  
+>}  
 
