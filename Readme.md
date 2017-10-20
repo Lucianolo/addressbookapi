@@ -3,61 +3,61 @@
 Node.js RESTful API for users/addresses management.
 
 
-### USAGE ###
+# Endponts #
 
 ------------------
 
-
 ## USERS ##
 
-# Actions: #
+### Actions: ###
 
-1) POST - "/users/registration"
+>POST - "/users/registration"
 
-Headers: 
+### Headers: ###Headers: 
 
-Content-Type : Application/json
+>Content-Type : Application/json
 
-Body: 
-{
-	email: String,
-	password: String
-}
+### Body: ###
+>{
+>>	email: String,
+>>	password: String
+>}
 
-2) POST - "/users/authenticate"
+------------------
 
-Headers: 
+>POST - "/users/authenticate"
 
-Content-Type: Application/json
+### Headers: ###
 
-Body:
-{
-	email: String,
-	password: String
-}
+>Content-Type: Application/json
 
-
-
-
+### Body: ###
+>{
+>>	email: String,
+>>	password: String
+>}
 
 
+------------------
 
-### How do I get set up? ###
+## ADDRESSES ##
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+### Actions: ###
 
-### Contribution guidelines ###
+>POST - "/addresses/add"
 
-* Writing tests
-* Code review
-* Other guidelines
+### Headers: ###
 
-### Who do I talk to? ###
+>Content-Type : Application/json,
+>Authorization: JWT token
 
-* Repo owner or admin
-* Other community or team contact
+### Body: ###
+>{
+>>	user_id: String,
+>>	payload : {
+>>>		first_name: String,
+>>>		last_name: String,
+>>>		address: String
+>>	}
+>}
+
