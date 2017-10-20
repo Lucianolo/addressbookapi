@@ -16,7 +16,7 @@ router.post('/register', (req, res, next) => {
 		if(err){
 			res.json({
 				success: false,
-				msg: err
+				msg: err.errMsg
 			});
 		} else {
 			res.json({
