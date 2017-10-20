@@ -30,10 +30,10 @@ router.post('/register', (req, res, next) => {
 
 // Authenticate
 router.post('/authenticate', (req, res, next) => {
-	const username = req.body.username;
+	const email = req.body.email;
 	const password = req.body.password;
 
-	User.getUserByUsernameOrEmail(username, (err, user) => {
+	User.getUserByEmail(email, (err, user) => {
 		if(err) throw err;
 		if(!user){
 			return res.json({
@@ -57,7 +57,7 @@ router.post('/authenticate', (req, res, next) => {
 			} else {
 				return res.json({
 					success: false, 
-					msg: 'Password Errata'
+					msg: 'Wrong Password'
 				});
 			}
 
