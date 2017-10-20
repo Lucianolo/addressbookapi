@@ -1,29 +1,28 @@
-<h1> README </h1>
+# README #
 
-<p> Node.js RESTful API for users/addresses management. </p>
+Node.js RESTful API for users/addresses management.
 
 
-<h1> Endponts </h1>
+# Endponts #
 
-<hr>
+------------------
 
-<h2> USERS </h2>
+## USERS ##
 
-<h3> Actions: </h3>
+### Actions: ###
 
-<h4>	POST - "/users/register"</h4>
+>POST - "/users/registration"
 
-<h3> Headers: </h3>
+### Headers: ###
 
-<h4> Content-Type : Application/json </h4>
+>Content-Type : Application/json
 
-<h3> Body: </h3>
-<h4>
-	{  <br/>
-		email: String,  <br/>
-		password: String <br/> 
-	}  <br/>
-</h4>
+### Body: ###
+{  
+>	email: String,  
+>	password: String  
+}  
+
 ------------------
 
 >POST - "/users/authenticate"
@@ -33,10 +32,10 @@
 >Content-Type: Application/json
 
 ### Body: ###
->{  
->>	email: String,  
->>	password: String  
->}  
+{  
+>	email: String,  
+>	password: String  
+}  
 
 
 ------------------
@@ -49,16 +48,16 @@
 
 ### Headers: ###
 
->Content-Type : Application/json,  
+>Content-Type : Application/json   
 >Authorization: JWT token  
 
 ### Body: ###
->{  
->>	user_id: String,  
->>	payload : {  
->>>		first_name: String,  
->>>		last_name: String,  
->>>		address: String  
->>	}  
->}  
+{  
+>	user_id: String,  
+>	payload : {  
+>>		first_name: String,  
+>>		last_name: String,  
+>>		address: String  
+>	}  
+}  
 
