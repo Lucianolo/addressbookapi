@@ -100,9 +100,9 @@ Node.js RESTful API for users/addresses management.
 
 # USAGE # 
 
-1	## Register a user making a POST request to '/users/register' ##
-2	## Authenticate the user making a POST request to '/users/authenticate' ##
-3	## Use the obtained JWT Token as 'Authorization' header for POST request to '/addresses/add' ##
-4	## Enjoy your Address Book! ##
+1.	Register a user making a POST request to '/users/register'
+2.	Authenticate the user making a POST request to '/users/authenticate'
+3.	Use the obtained JWT Token as 'Authorization' header for POST request to '/addresses/add'
+4.	Enjoy your Address Book!
 
 
