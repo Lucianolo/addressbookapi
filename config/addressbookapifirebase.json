@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "addressbookapi-7603f",
+  "private_key_id": "e4a74412a9541053382aae88f960a9ee052d74d3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCpMH8gaqGXi5z6\nYGj6kcs7+HbH6+zMvycViljIJ1vgKFZVgfoWD4qnRJ17TyBOsyFUFv5XkZmto5vk\nstVSlJ7hCdZ87bz/PwJeJuB1WqWw8sesr1lOys+2h35694QJjtqEsXSkG2R5vRpu\nZD86dQZgXpjxKiIsRoMc+LV0Vpgg93yaD9iICdVzfGSJa3zzck6Su7RHMxn97SSr\nb/Vg9ctLavcBHuofP6SBqkHxLsUgjonPXfYQq32tDuItxrQO70vJryh8PSSKF4Vp\nZ8BFI8Mj97ocaV/mjEZ/+owXb53EeNCgfXebAYL70ovj9xj0mNJ8gskfTVMIuzzU\nLiC6WVTHAgMBAAECggEAUXzfLfDNxZzjzZ/T0COaXFcOdroGApNqsrBAlJ6IXM1w\nz5xbpHZ11JxysSpqKB2UxtiQRgMFnqE3e446upyEbWT8no0uw01Iyao136/6L+Cv\nFVgbTpzWMFbQL0+5k5TvYIvL3yKmYRAYg+Tao0AsAwxs43LkpKiNi82qL89pVC62\nSZTr3yCsd5X2VIbljM5Gu0S10i7I8ly7gQqRvgkHdvfkWB6JOXtWEK2W3OmTtQIJ\nUnbbd+/KNqXH+TYsYzXIPP8/D9i0ibK/6bYNddbPUwIzTV41nmGOJQ8gMFStJBAE\nlOIpgf5d4sgW+F8ilcVo+6IC1O60b9j8QVVrfwndAQKBgQDc+yJCHQ2+B6L1v8R6\nO+mpQSv5aLNitPUu9Ilhz4fEnl8NOEgj0gsqwqmqIMHe2RVBs0bh8e0uiAfwWD0C\noY6v9Oho/4xAbWrPeRDIPXgbouFzMAydXrSgi/TaLggQgxxrm0uU82tOKYzUL2H+\nspR1MUli2OuDr80XO2in/BY9gQKBgQDEAEHqDObDy15NvAZ73LRW5WyFy+nUU561\nJo3LmM3Jr9mLyWIhVsdU3mI4RXgLzPI6Jd6hvjBUdh8dxHTccN8b1kXX3aBmWemt\nuCsdiFqIxqcIy08WC5FP2Y5qYCn5lgXDibXWAFq8H5qPmLLTtSRelUEufCgijdaN\npg8AI91GRwKBgQDBVBTMso5rSlMPnQ5PwkrSgOnv8eG+4YH/6oCmyeGF6uhNsIes\njv6mElhNNwtl45XtPOMumXFf3DLV2tzFiIJE/oa2FZymYROpH8nG5cBGrWGAXPEs\nXMa6DrfQiaUUjSA4JE0jqzKd10wV9r5NDf9D6DLD//NL6moLgTY2gR0UAQKBgQCw\nRXsCP3Aajn/VcVBzfN5DeDnNasJ0zm9hg7bqcBZDWP9RlF/Ik/7Y+NdkvDVmh38h\nhIVg+WcFzuXVI6Xlyy0cH+zYYt2qrxpVvdgoy0SA1gfLBO2vad/Z7FMEoE+fw6iT\nXvpF6DOyFMowcqgBdlurJJhmcgq2aNGYusuq2JZcaQKBgQDUsZxfiXdJ0lvNSGQU\n5zBhSPWE3fo8GLea5mFPUmOlFjcqNBNq3bC523tCEMr5cOKBIHKLJPtm+dbngpad\nzEC43Y9TTPd+cfFzb/6WguIY2cm4Wb18ygRFNS4OHE4Y070aTSV2716D1GHwLngK\nCGpp5F8nl/QPHhPAntpTxIouPQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-sedyk@addressbookapi-7603f.iam.gserviceaccount.com",
+  "client_id": "117172569136089981956",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-sedyk%40addressbookapi-7603f.iam.gserviceaccount.com"
+}
