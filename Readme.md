@@ -60,7 +60,7 @@ Node.js RESTful API for users/addresses management.
 
 >Status : 200 -> Success / 500 -> Internal Server Error    
 >User : If status == 200, contains the created entity    
->Token : If status == 200, contains the JWT Token needed to access user's resources
+>Token : If status == 200, contains user's JWT Token 
 >Error : If status == 500, contains the error message    
 
 
@@ -94,3 +94,15 @@ Node.js RESTful API for users/addresses management.
 ## RESPONSE ##
 
 >Status : 200 -> Success / 500 -> Internal Server Error    
+
+
+------------------
+
+# USAGE # 
+
+1	## Register a user making a POST request to '/users/register' ##
+2	## Authenticate the user making a POST request to '/users/authenticate' ##
+3	## Use the obtained JWT Token as 'Authorization' header for POST request to '/addresses/add' ##
+4	## Enjoy your Address Book! ##
+
+
