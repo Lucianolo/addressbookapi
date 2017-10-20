@@ -9,7 +9,9 @@ Node.js RESTful API for users/addresses management.
 
 ## USERS ##
 
-### Actions: ###
+------------------
+
+### Action: ###
 
 >POST - "/users/registration"
 
@@ -21,9 +23,11 @@ Node.js RESTful API for users/addresses management.
 {  
 >	email: String,  
 >	password: String  
-}  
+<}  
 
 ------------------
+
+### Action: ###
 
 >POST - "/users/authenticate"
 
@@ -35,14 +39,16 @@ Node.js RESTful API for users/addresses management.
 {  
 >	email: String,  
 >	password: String  
-}  
+<}  
 
 
 ------------------
 
 ## ADDRESSES ##
 
-### Actions: ###
+------------------
+
+### Action: ###
 
 >POST - "/addresses/add"
 
@@ -52,12 +58,12 @@ Node.js RESTful API for users/addresses management.
 >Authorization: JWT token  
 
 ### Body: ###
-{  
->	user_id: String,  
->	payload : {  
->>		first_name: String,  
->>		last_name: String,  
->>		address: String  
->	}  
-}  
+		{  
+			user_id: String,  
+			payload : {  
+				first_name: String,  
+				last_name: String,  
+				address: String  
+			}  
+		}  
 
