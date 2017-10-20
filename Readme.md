@@ -1,28 +1,29 @@
-# README #
+<h1> README </h1>
 
-Node.js RESTful API for users/addresses management.
+<p> Node.js RESTful API for users/addresses management. </p>
 
 
-# Endponts #
+<h1> Endponts </h1>
 
-------------------
+<hr>
 
-## USERS ##
+<h2> USERS </h2>
 
-### Actions: ###
+<h3> Actions: </h3>
 
->POST - "/users/registration"
+<h4>	POST - "/users/register"</h4>
 
-### Headers: ###Headers: 
+<h3> Headers: </h3>
 
->Content-Type : Application/json
+<h4> Content-Type : Application/json </h4>
 
-### Body: ###
->{  
->>	email: String,  
->>	password: String  
->}  
-
+<h3> Body: </h3>
+<h4>
+	{  <br/>
+		email: String,  <br/>
+		password: String <br/> 
+	}  <br/>
+</h4>
 ------------------
 
 >POST - "/users/authenticate"
