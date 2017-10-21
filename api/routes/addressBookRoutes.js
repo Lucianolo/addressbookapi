@@ -17,7 +17,13 @@ const db = admin.database();
 
 router.post('/add', passport.authenticate('jwt', {session: false}), (req, res, next) => {
 
-	const {user_id, first_name, last_name, address } = req.body;
+	const user_id = req.body.user_id;
+  const first_name = req.body.payload.first_name;
+  const last_name = req.body.payload.last_name;
+  const address = req.body.payload.address;
+
+  // You can check the value of Payload's fields and send an error if needed 
+
   
 	db.ref(`addresses/${user_id}`).push({ first_name, last_name, address}, (error, data) => {
     	if (error) {
@@ -32,6 +38,7 @@ router.post('/add', passport.authenticate('jwt', {session: false}), (req, res, n
           })
     	}
   	});
+
 
 });
 

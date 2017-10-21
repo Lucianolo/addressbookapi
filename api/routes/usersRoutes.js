@@ -63,7 +63,6 @@ router.post('/authenticate', (req, res, next) => {
 				const token = jwt.sign(user, config.secret, {
 					expiresIn: 86400 // 1 day
 				});
-				console.log(jwt);
 				res.json({
 					success: true,
 					token: 'JWT '+token,

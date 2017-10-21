@@ -1,8 +1,9 @@
 
 const supertest = require("supertest");
 const should = require("should");
-const server = supertest.agent("https://addressbookapi-strv.herokuapp.com");
+const server = supertest.agent("https://addressbookapi-strv.herokuapp.com"); 
 
+// Check for invalid routes
 describe('Invalid endpoint', () => {
 	it("should return 404",(done)=>{
     	server
@@ -15,7 +16,7 @@ describe('Invalid endpoint', () => {
   	});
 })
 
-
+// User Registration
 describe('user/register API endpoint', () => {
 	it("should add a user if data is valid",(done) => {
 		const rand = Math.random();
@@ -46,8 +47,7 @@ describe('user/register API endpoint', () => {
 	});
 })
 
-
-
+// User Authentication
 describe('user/authenticate API endpoint', () => {
 	it("should login a user if credentials are valid",(done) => {
 		server
@@ -94,7 +94,7 @@ describe('user/authenticate API endpoint', () => {
 	});
 })
 
-
+// Add a record to AddressBook
 describe('/addresses/add API endpoint', () => {
 	
 	it("should add an address if token and data are valid",(done) => {
@@ -115,7 +115,13 @@ describe('/addresses/add API endpoint', () => {
     	  	user_id  = res.body.user._id;
     	  	server.post('/addresses/add')
     		.set('Authorization', token)
-    		.send({user_id: user_id, first_name: "Marco", last_name: "Gennarini", address: "Via dei monti"})
+    		.send({	user_id: user_id, 
+    				payload: {
+    					first_name: "Marco", 
+    					last_name: "Gennarini", 
+    					address: "Via dei monti"
+    				}
+    			})
     		.expect("Content-type",/json/)
     		.expect(201)
     		.end((err,res) => {
@@ -145,7 +151,13 @@ describe('/addresses/add API endpoint', () => {
     	  	user_id  = res.body.user._id;
     	  	server.post('/addresses/add')
     		.set('Authorization', token)
-    		.send({user_id: user_id, first_name: "Marco", last_name: "Gennarini", address: "Via dei monti"})
+    		.send({	user_id: user_id, 
+    				payload: {
+    					first_name: "Marco", 
+    					last_name: "Gennarini", 
+    					address: "Via dei monti"
+    				}
+    			})
     		.expect("Content-type",/json/)
     		.expect(401)
     		.end((err,res) => {
