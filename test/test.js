@@ -1,7 +1,7 @@
 
 const supertest = require("supertest");
 const should = require("should");
-const server = supertest.agent("https://addressbookapi-strv.herokuapp.com"); 
+const server = supertest.agent("http://localhost:3000"); 
 
 // Check for invalid routes
 describe('Invalid endpoint', () => {
@@ -84,9 +84,9 @@ describe('user/authenticate API endpoint', () => {
     	.post('/users/authenticate')
     	.send({email : "test@test.it", password : "12345678"})
     	.expect("Content-type",/json/)
-    	.expect(200)
+    	.expect(401)
     	.end((err,res) => {
-    	  res.status.should.equal(200);
+    	  res.status.should.equal(401);
     	  res.body.success.should.equal(false);
     	  res.body.msg.should.equal("Wrong Password");
     	  done();

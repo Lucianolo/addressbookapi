@@ -30,7 +30,9 @@ module.exports.getUserByEmail = function(email, callback){
 	
 }
 
+
 module.exports.addUser = function(newUser, callback){
+	// Password encrypted with salt
 	bcrypt.genSalt(10, (err, salt) => {
 		bcrypt.hash(newUser.password, salt, (err, hash) => {
 			if(err) throw err;

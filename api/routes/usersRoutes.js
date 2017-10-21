@@ -21,7 +21,7 @@ router.post('/register', (req, res, next) => {
 	}
 	User.addUser(newUser, (err, user) => {
 		if(err){
-			res.json({
+			res.status(500).json({
 				success: false,
 				msg: err
 			});
@@ -41,11 +41,10 @@ router.post('/authenticate', (req, res, next) => {
 	const password = req.body.password;
 
 	if(!(email) || !(password)){
-		res.status(403).json({
+		return res.status(403).json({
 			success: false,
 			msg: "Invalid data"
 		});
-		return;
 	}
 
 	User.getUserByEmail(email, (err, user) => {
@@ -58,23 +57,28 @@ router.post('/authenticate', (req, res, next) => {
 		} 
 		
 		User.comparePassword(password, user.password, (err, isMatch) => {
-			if(err) throw err;
-			if(isMatch){
-				const token = jwt.sign(user, config.secret, {
-					expiresIn: 86400 // 1 day
-				});
-				res.json({
-					success: true,
-					token: 'JWT '+token,
-					user: user
+			if(err){
+				return res.status(500).json({
+					success: false,
+					msg: err
 				});
 			} else {
-				return res.json({
-					success: false, 
-					msg: 'Wrong Password'
-				});
+				if(isMatch){
+					const token = jwt.sign(user, config.secret, {
+						expiresIn: 86400 // 1 day
+					});
+					res.json({
+						success: true,
+						token: 'JWT '+token,
+						user: user
+					});
+				} else {
+					return res.status(401).json({
+						success: false, 
+						msg: 'Wrong Password'
+					});
+				}
 			}
-
 		});
 	})
 });

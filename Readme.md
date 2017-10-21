@@ -33,8 +33,8 @@ Node.js RESTful API for users/addresses management.
 
 ## RESPONSE ##
 
->Status : 200 -> Success / 500 -> Internal Server Error    
->User : If status == 200, contains the created entity    
+>Status : 201 -> Success / 500 -> Internal Server Error   / 403 -> Invalid Data  
+>User : If status == 201, contains the created entity    
 >Error : If status == 500, contains the error message    
 
 -------------- 
@@ -58,10 +58,11 @@ Node.js RESTful API for users/addresses management.
 
 ## RESPONSE ##
 
->Status : 200 -> Success / 500 -> Internal Server Error    
+>Status : 200 -> Success / 500 -> Internal Server Error  / 403 -> Invalid Data  / 401 -> Wrong Password
 >User : If status == 200, contains the created entity    
 >Token : If status == 200, contains user's JWT Token 
->Error : If status == 500, contains the error message    
+>Error : If status == 500, contains the error message  
+
 
 
 ------------------
@@ -93,7 +94,8 @@ Node.js RESTful API for users/addresses management.
 
 ## RESPONSE ##
 
->Status : 200 -> Success / 500 -> Internal Server Error    
+>Status : 201 -> Success / 500 -> Internal Server Error  / 401 -> Unauthorized
+>Address: if status == 201, contains the created address record  
 
 
 ------------------
@@ -103,6 +105,7 @@ Node.js RESTful API for users/addresses management.
 1.	Register a user making a POST request to '/users/register'
 2.	Authenticate the user making a POST request to '/users/authenticate'
 3.	Use the obtained JWT Token as 'Authorization' header for POST request to '/addresses/add'
+3.  Use a user's id in the post request's body to save the record in the user's collection
 4.	Enjoy your Address Book!
 
 

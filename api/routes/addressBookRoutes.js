@@ -34,7 +34,8 @@ router.post('/add', passport.authenticate('jwt', {session: false}), (req, res, n
       		
     	} else {
       		res.status(201).json({
-            success: true
+            success: true,
+            address: req.body.payload
           })
     	}
   	});
