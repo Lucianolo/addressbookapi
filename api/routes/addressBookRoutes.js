@@ -18,6 +18,7 @@ const db = admin.database();
 router.post('/add', passport.authenticate('jwt', {session: false}), (req, res, next) => {
 
 	const {user_id, first_name, last_name, address } = req.body;
+  
 	db.ref(`addresses/${user_id}`).push({ first_name, last_name, address}, (error, data) => {
     	if (error) {
       		res.status(500).json({

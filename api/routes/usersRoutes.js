@@ -12,14 +12,21 @@ router.post('/register', (req, res, next) => {
 		password: req.body.password
 	});
 
+	if(!(newUser.email) || !(newUser.password)){
+		res.status(403).json({
+			success: false,
+			msg: "Invalid data"
+		});
+		return;
+	}
 	User.addUser(newUser, (err, user) => {
 		if(err){
 			res.json({
 				success: false,
-				msg: err.errMsg
+				msg: err
 			});
 		} else {
-			res.json({
+			res.status(201).json({
 				success: true,
 				msg: 'You have successfully registered!',
 				user: user
@@ -32,6 +39,14 @@ router.post('/register', (req, res, next) => {
 router.post('/authenticate', (req, res, next) => {
 	const email = req.body.email;
 	const password = req.body.password;
+
+	if(!(email) || !(password)){
+		res.status(403).json({
+			success: false,
+			msg: "Invalid data"
+		});
+		return;
+	}
 
 	User.getUserByEmail(email, (err, user) => {
 		if(err) throw err;
