@@ -1,7 +1,7 @@
 
 const supertest = require("supertest");
 const should = require("should");
-const server = supertest.agent("http://localhost:3000"); 
+const server = supertest.agent("https://addressbookapi-strv.herokuapp.com"); 
 
 // Check for invalid routes
 describe('Invalid endpoint', () => {
